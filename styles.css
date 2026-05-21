@@ -262,6 +262,7 @@ h3 {
 .skill-card,
 .resume-card,
 .contact-form,
+.ngo-form,
 .contact-links a {
   background: rgba(255, 253, 248, 0.9);
   border: 1px solid var(--line);
@@ -618,6 +619,43 @@ dd {
   background: linear-gradient(135deg, rgba(255, 253, 248, 0.95), rgba(231, 240, 228, 0.92));
 }
 
+.ngo-form {
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+  padding: clamp(22px, 4vw, 30px);
+}
+
+.form-intro {
+  max-width: 760px;
+}
+
+.form-intro p:last-child {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.form-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.ngo-form label {
+  color: var(--muted);
+  display: grid;
+  font-size: 0.9rem;
+  font-weight: 800;
+  gap: 7px;
+}
+
+.ngo-form-status {
+  color: var(--sage-dark);
+  font-weight: 800;
+  margin: 0;
+  min-height: 24px;
+}
+
 .achievements-section {
   background: linear-gradient(135deg, rgba(127, 156, 134, 0.17), rgba(142, 183, 214, 0.16));
 }
@@ -827,7 +865,8 @@ textarea:focus {
   }
 
   .project-grid,
-  .story-grid {
+  .story-grid,
+  .form-grid {
     grid-template-columns: 1fr;
   }
 

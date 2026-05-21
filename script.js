@@ -3,6 +3,8 @@ const siteNav = document.querySelector(".site-nav");
 const revealItems = document.querySelectorAll(".reveal");
 const contactForm = document.querySelector(".contact-form");
 const formStatus = document.querySelector(".form-status");
+const ngoForm = document.querySelector(".ngo-form");
+const ngoFormStatus = document.querySelector(".ngo-form-status");
 
 navToggle.addEventListener("click", () => {
   const isOpen = siteNav.classList.toggle("open");
@@ -37,5 +39,13 @@ if (contactForm && formStatus) {
     event.preventDefault();
     formStatus.textContent = "Thank you. This form is ready to connect to an email or form service.";
     contactForm.reset();
+  });
+}
+
+if (ngoForm && ngoFormStatus) {
+  ngoForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    ngoFormStatus.textContent = "Thank you. This WebLift inquiry is ready to connect to an email or form service.";
+    ngoForm.reset();
   });
 }
