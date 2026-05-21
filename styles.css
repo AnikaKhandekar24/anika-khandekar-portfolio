@@ -549,6 +549,17 @@ dd {
   padding: 22px;
 }
 
+.text-link {
+  color: var(--sage-dark);
+  display: inline-block;
+  font-weight: 800;
+  margin-top: 12px;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
 .cert-grid {
   grid-template-columns: repeat(3, 1fr);
 }
