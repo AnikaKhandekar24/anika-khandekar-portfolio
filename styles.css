@@ -588,52 +588,6 @@ dd {
   font-size: 0.86rem;
 }
 
-.document-panel {
-  background: rgba(255, 253, 248, 0.92);
-  border: 1px solid var(--line);
-  border-radius: 26px;
-  box-shadow: var(--shadow);
-  display: grid;
-  gap: 22px;
-  margin-top: 22px;
-  padding: clamp(22px, 4vw, 30px);
-}
-
-.document-panel p {
-  color: var(--muted);
-  margin-bottom: 0;
-}
-
-.document-grid {
-  display: grid;
-  gap: 12px;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.document-grid a {
-  background: var(--soft);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  color: var(--ink);
-  display: grid;
-  font-weight: 800;
-  gap: 5px;
-  padding: 18px;
-  transition: background 180ms ease, transform 180ms ease;
-}
-
-.document-grid a:hover {
-  background: #eef4ec;
-  transform: translateY(-3px);
-}
-
-.document-grid span {
-  color: var(--sage-dark);
-  font-size: 0.74rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 .leadership-grid {
   grid-template-columns: 1.35fr 0.8fr;
 }
@@ -838,9 +792,6 @@ textarea:focus {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .document-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 920px) {
