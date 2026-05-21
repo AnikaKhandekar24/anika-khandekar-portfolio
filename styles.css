@@ -578,6 +578,28 @@ dd {
   padding: 12px 0;
 }
 
+.certificate-item {
+  gap: 8px;
+}
+
+.certificate-link {
+  align-self: start;
+  background: rgba(79, 115, 89, 0.12);
+  border: 1px solid rgba(79, 115, 89, 0.22);
+  border-radius: 999px;
+  color: var(--sage-dark);
+  display: inline-flex;
+  font-size: 0.84rem;
+  font-weight: 800;
+  justify-self: start;
+  margin-top: 4px;
+  padding: 7px 12px;
+}
+
+.certificate-link:hover {
+  background: rgba(79, 115, 89, 0.18);
+}
+
 .cert-card li:first-child,
 .skill-card li:first-child {
   border-top: 0;
