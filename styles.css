@@ -311,6 +311,21 @@ h3 {
   padding: clamp(18px, 3vw, 28px);
 }
 
+.logo-visual {
+  align-items: center;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  display: flex;
+  justify-content: center;
+}
+
+.logo-visual img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
 .hero-visual span {
   background: rgba(255, 253, 248, 0.72);
   border: 1px solid rgba(255, 255, 255, 0.42);
