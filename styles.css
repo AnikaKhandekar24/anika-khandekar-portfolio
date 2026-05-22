@@ -394,7 +394,7 @@ h3 {
 .story-grid {
   display: grid;
   gap: 18px;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr);
 }
 
 .about-photo-card {
@@ -404,6 +404,7 @@ h3 {
   box-shadow: var(--shadow);
   grid-row: span 2;
   margin: 0;
+  max-width: 360px;
   overflow: hidden;
 }
 
