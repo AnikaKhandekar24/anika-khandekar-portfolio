@@ -391,10 +391,21 @@ h3 {
   margin: 0;
 }
 
+#about .section-heading {
+  margin-bottom: 28px;
+  max-width: 760px;
+}
+
+#about .section-heading h2 {
+  font-size: clamp(2rem, 3.4vw, 3.35rem);
+  max-width: 740px;
+}
+
 .story-grid {
+  align-items: start;
   display: grid;
   gap: 18px;
-  grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr);
+  grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
 }
 
 .about-photo-card {
@@ -403,9 +414,11 @@ h3 {
   border-radius: 26px;
   box-shadow: var(--shadow);
   grid-row: span 2;
+  justify-self: start;
   margin: 0;
-  max-width: 360px;
+  max-width: none;
   overflow: hidden;
+  width: 100%;
 }
 
 .about-photo-card img {
@@ -426,6 +439,10 @@ h3 {
 
 .story-card.wide {
   grid-column: auto;
+}
+
+#about .story-card p {
+  max-width: 84ch;
 }
 
 .project-grid {
@@ -873,7 +890,8 @@ textarea:focus {
 
   .about-photo-card {
     grid-row: auto;
-    max-width: 520px;
+    justify-self: center;
+    max-width: 360px;
   }
 
   .hero {
