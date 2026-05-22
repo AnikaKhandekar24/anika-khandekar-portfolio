@@ -408,12 +408,17 @@ h3 {
   grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
 }
 
+.about-side,
+.about-main {
+  display: grid;
+  gap: 18px;
+}
+
 .about-photo-card {
   background: rgba(255, 253, 248, 0.9);
   border: 1px solid var(--line);
   border-radius: 26px;
   box-shadow: var(--shadow);
-  grid-row: span 2;
   justify-self: start;
   margin: 0;
   max-width: none;
@@ -889,7 +894,6 @@ textarea:focus {
   }
 
   .about-photo-card {
-    grid-row: auto;
     justify-self: center;
     max-width: 360px;
   }
