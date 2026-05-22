@@ -467,8 +467,16 @@ h3 {
   grid-column: auto;
 }
 
+.future-goals-card {
+  grid-column: 1 / -1;
+}
+
 #about .story-card p {
   max-width: 84ch;
+}
+
+.future-goals-card p {
+  max-width: 120ch;
 }
 
 .project-grid {
