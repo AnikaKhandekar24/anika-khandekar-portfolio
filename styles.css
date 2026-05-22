@@ -414,12 +414,12 @@ h3 {
 
 #about .section-heading {
   margin-bottom: 28px;
-  max-width: 760px;
+  max-width: 1120px;
 }
 
 #about .section-heading h2 {
   font-size: clamp(2rem, 3.4vw, 3.35rem);
-  max-width: 740px;
+  max-width: 1080px;
 }
 
 .story-grid {
