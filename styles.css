@@ -545,10 +545,12 @@ h3 {
   font-weight: 800;
 }
 
-.magazine-preview iframe {
-  border: 0;
+.magazine-preview img {
+  display: block;
   height: 100%;
   min-height: 380px;
+  object-fit: cover;
+  object-position: center top;
   width: 100%;
 }
 
