@@ -371,7 +371,7 @@ h3 {
 }
 
 .highlight-grid {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .passion-section {
@@ -467,6 +467,85 @@ h3 {
 .passion-card .button {
   justify-self: start;
   margin-top: 4px;
+}
+
+.feline-section {
+  background:
+    linear-gradient(135deg, rgba(255, 253, 248, 0.95), rgba(246, 221, 201, 0.52)),
+    var(--paper);
+}
+
+.feline-showcase {
+  align-items: stretch;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.46fr);
+}
+
+.feline-copy,
+.feline-panel {
+  background: rgba(255, 253, 248, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  box-shadow: var(--shadow);
+}
+
+.feline-copy {
+  display: grid;
+  gap: 16px;
+  padding: clamp(26px, 5vw, 42px);
+}
+
+.feline-copy h2 {
+  margin-bottom: 0;
+}
+
+.feline-copy p {
+  color: var(--muted);
+  margin-bottom: 0;
+  max-width: 92ch;
+}
+
+.feline-lead {
+  color: var(--ink) !important;
+  font-size: clamp(1.12rem, 2vw, 1.38rem);
+  font-weight: 700;
+}
+
+.feline-copy .button {
+  justify-self: start;
+}
+
+.feline-panel {
+  background:
+    linear-gradient(145deg, rgba(31, 41, 55, 0.92), rgba(79, 115, 89, 0.9)),
+    var(--ink);
+  color: #fff;
+  display: grid;
+  min-height: 320px;
+  padding: clamp(24px, 4vw, 34px);
+}
+
+.feline-panel span {
+  color: #d8eadb;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.feline-panel strong {
+  align-self: center;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1;
+}
+
+.feline-panel small {
+  align-self: end;
+  color: #eaf3ea;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .soft-card,
@@ -605,12 +684,6 @@ h3 {
     linear-gradient(135deg, #d2e1ec, #e8ded0);
 }
 
-.feline-thumb {
-  background:
-    radial-gradient(circle at 24% 34%, rgba(255, 253, 248, 0.82), transparent 20%),
-    linear-gradient(135deg, #e7aa92, #f6ddc9);
-}
-
 .cyber-thumb {
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.22) 25%, transparent 25%) 0 0 / 34px 34px,
@@ -659,6 +732,14 @@ h3 {
   display: grid;
   gap: 24px;
   grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.72fr);
+}
+
+.awards-only-layout {
+  grid-template-columns: 1fr;
+}
+
+.awards-only-layout .stack-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .research-card {
@@ -1009,6 +1090,8 @@ textarea:focus {
   .research-layout,
   .leadership-grid,
   .passion-grid,
+  .feline-showcase,
+  .awards-only-layout .stack-list,
   .resume-section,
   .contact-section {
     grid-template-columns: 1fr;
