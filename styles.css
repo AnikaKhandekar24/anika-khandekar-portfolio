@@ -258,6 +258,7 @@ h3 {
 
 .hero-card,
 .soft-card,
+.passion-card,
 .story-card,
 .project-card,
 .research-card,
@@ -361,6 +362,7 @@ h3 {
 }
 
 .highlight-grid,
+.passion-grid,
 .cert-grid,
 .leadership-grid,
 .skills-grid {
@@ -370,6 +372,101 @@ h3 {
 
 .highlight-grid {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.passion-section {
+  background:
+    linear-gradient(135deg, rgba(31, 41, 55, 0.96), rgba(53, 77, 64, 0.94)),
+    var(--ink);
+  color: #fff;
+}
+
+.passion-section .eyebrow,
+.passion-section .section-heading p {
+  color: #d8eadb;
+}
+
+.passion-section .section-heading {
+  max-width: 1040px;
+}
+
+.passion-section .section-heading h2 {
+  max-width: 960px;
+}
+
+.passion-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.passion-card {
+  background: rgba(255, 253, 248, 0.96);
+  color: var(--ink);
+  display: grid;
+  gap: 18px;
+  overflow: hidden;
+  padding: clamp(24px, 4vw, 34px);
+  position: relative;
+}
+
+.passion-card::before {
+  background: linear-gradient(90deg, var(--sage), var(--blue), var(--peach));
+  content: "";
+  height: 6px;
+  inset: 0 0 auto;
+  position: absolute;
+}
+
+.featured-passion::before {
+  background: linear-gradient(90deg, var(--blue), var(--sage), var(--peach));
+}
+
+.passion-card h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.8rem, 3vw, 2.55rem);
+  margin-bottom: 0;
+}
+
+.passion-card p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.passion-card-top {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.project-status {
+  background: rgba(79, 115, 89, 0.12);
+  border: 1px solid rgba(79, 115, 89, 0.18);
+  border-radius: 999px;
+  color: var(--sage-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 7px 10px;
+  white-space: nowrap;
+}
+
+.impact-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.impact-list span {
+  background: var(--soft);
+  border-radius: 999px;
+  color: #405248;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 8px 11px;
+}
+
+.passion-card .button {
+  justify-self: start;
+  margin-top: 4px;
 }
 
 .soft-card,
@@ -911,6 +1008,7 @@ textarea:focus {
   .mission-section,
   .research-layout,
   .leadership-grid,
+  .passion-grid,
   .resume-section,
   .contact-section {
     grid-template-columns: 1fr;
