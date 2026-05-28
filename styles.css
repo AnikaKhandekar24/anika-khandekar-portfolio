@@ -483,7 +483,7 @@ h3 {
 }
 
 .feline-copy,
-.feline-panel {
+.magazine-preview {
   background: rgba(255, 253, 248, 0.92);
   border: 1px solid var(--line);
   border-radius: 26px;
@@ -516,36 +516,40 @@ h3 {
   justify-self: start;
 }
 
-.feline-panel {
-  background:
-    linear-gradient(145deg, rgba(31, 41, 55, 0.92), rgba(79, 115, 89, 0.9)),
-    var(--ink);
-  color: #fff;
+.magazine-preview {
   display: grid;
-  min-height: 320px;
-  padding: clamp(24px, 4vw, 34px);
+  grid-template-rows: auto 1fr;
+  min-height: 420px;
+  overflow: hidden;
 }
 
-.feline-panel span {
-  color: #d8eadb;
-  font-size: 0.78rem;
+.preview-label {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 16px;
+}
+
+.preview-label span {
+  color: var(--sage-dark);
+  font-size: 0.76rem;
   font-weight: 800;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.feline-panel strong {
-  align-self: center;
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(2rem, 4vw, 3.4rem);
-  line-height: 1;
+.preview-label a {
+  color: var(--ink);
+  font-size: 0.84rem;
+  font-weight: 800;
 }
 
-.feline-panel small {
-  align-self: end;
-  color: #eaf3ea;
-  font-size: 1rem;
-  font-weight: 700;
+.magazine-preview iframe {
+  border: 0;
+  height: 100%;
+  min-height: 380px;
+  width: 100%;
 }
 
 .soft-card,
