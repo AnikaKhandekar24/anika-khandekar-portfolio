@@ -275,7 +275,7 @@ h3 {
 
 .hero-card,
 .soft-card,
-.passion-card,
+.archive-card,
 .story-card,
 .project-card,
 .research-card,
@@ -379,7 +379,6 @@ h3 {
 }
 
 .highlight-grid,
-.passion-grid,
 .cert-grid,
 .leadership-grid,
 .skills-grid {
@@ -391,78 +390,32 @@ h3 {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.passion-section {
+.archive-section {
   background:
     linear-gradient(135deg, rgba(31, 41, 55, 0.96), rgba(53, 77, 64, 0.94)),
     var(--ink);
-  color: #fff;
 }
 
-.passion-section .eyebrow,
-.passion-section .section-heading p {
-  color: #d8eadb;
-}
-
-.passion-section .section-heading {
-  max-width: 1040px;
-}
-
-.passion-section .section-heading h2 {
-  max-width: 960px;
-}
-
-.passion-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.passion-card {
-  background: rgba(255, 253, 248, 0.96);
-  color: var(--ink);
+.archive-card {
+  align-items: end;
+  background:
+    linear-gradient(135deg, rgba(255, 253, 248, 0.98), rgba(244, 239, 229, 0.9));
   display: grid;
-  gap: 18px;
-  overflow: hidden;
-  padding: clamp(24px, 4vw, 34px);
-  position: relative;
+  gap: 24px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  padding: clamp(28px, 5vw, 46px);
 }
 
-.passion-card::before {
-  background: linear-gradient(90deg, var(--sage), var(--blue), var(--peach));
-  content: "";
-  height: 6px;
-  inset: 0 0 auto;
-  position: absolute;
-}
-
-.featured-passion::before {
-  background: linear-gradient(90deg, var(--blue), var(--sage), var(--peach));
-}
-
-.passion-card h3 {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(1.8rem, 3vw, 2.55rem);
+.archive-card .section-heading {
   margin-bottom: 0;
 }
 
-.passion-card p {
+.archive-card p {
   color: var(--muted);
-  margin-bottom: 0;
 }
 
-.passion-card-top {
-  align-items: center;
-  display: flex;
-  gap: 12px;
-  justify-content: space-between;
-}
-
-.project-status {
-  background: rgba(79, 115, 89, 0.12);
-  border: 1px solid rgba(79, 115, 89, 0.18);
-  border-radius: 999px;
-  color: var(--sage-dark);
-  font-size: 0.78rem;
-  font-weight: 800;
-  padding: 7px 10px;
+.archive-card .button {
+  justify-self: end;
   white-space: nowrap;
 }
 
@@ -479,11 +432,6 @@ h3 {
   font-size: 0.8rem;
   font-weight: 800;
   padding: 8px 11px;
-}
-
-.passion-card .button {
-  justify-self: start;
-  margin-top: 4px;
 }
 
 .feline-section {
@@ -1112,8 +1060,8 @@ textarea:focus {
   .mission-section,
   .research-layout,
   .leadership-grid,
-  .passion-grid,
   .feline-showcase,
+  .archive-card,
   .awards-only-layout .stack-list,
   .resume-section,
   .contact-section {
@@ -1162,6 +1110,10 @@ textarea:focus {
 
   .site-nav a {
     width: 100%;
+  }
+
+  .archive-card .button {
+    justify-self: start;
   }
 
   .nav-toggle {
