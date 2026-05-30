@@ -397,12 +397,12 @@ h3 {
 }
 
 .archive-card {
-  align-items: end;
+  align-items: center;
   background:
     linear-gradient(135deg, rgba(255, 253, 248, 0.98), rgba(244, 239, 229, 0.9));
   display: grid;
-  gap: 24px;
-  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(24px, 4vw, 42px);
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.52fr);
   padding: clamp(28px, 5vw, 46px);
 }
 
@@ -414,8 +414,22 @@ h3 {
   color: var(--muted);
 }
 
-.archive-card .button {
-  justify-self: end;
+.archive-action {
+  display: grid;
+  gap: 16px;
+  justify-items: end;
+}
+
+.archive-action img {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(31, 41, 55, 0.14);
+  display: block;
+  max-width: 390px;
+  width: 100%;
+}
+
+.archive-action .button {
   white-space: nowrap;
 }
 
@@ -1112,7 +1126,11 @@ textarea:focus {
     width: 100%;
   }
 
-  .archive-card .button {
+  .archive-action {
+    justify-items: start;
+  }
+
+  .archive-action .button {
     justify-self: start;
   }
 
