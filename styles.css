@@ -681,6 +681,11 @@ h3 {
   padding: 24px;
 }
 
+.project-content .button {
+  justify-self: start;
+  margin-top: 4px;
+}
+
 .project-detail {
   background: var(--soft);
   border-radius: 18px;
