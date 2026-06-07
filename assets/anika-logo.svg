@@ -1,59 +1,55 @@
 <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Anika Khandekar portfolio logo</title>
-  <desc id="desc">A modern symbolic logo showing a digital product window, connected AI nodes, and a protected technology core.</desc>
+  <desc id="desc">A minimal SaaS-style symbol made from layered digital product panels and connected technology nodes.</desc>
   <defs>
-    <linearGradient id="background" x1="62" y1="52" x2="452" y2="462" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#E0F2FE"/>
+    <linearGradient id="page" x1="74" y1="54" x2="434" y2="456" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFC"/>
       <stop offset="0.5" stop-color="#EEF2FF"/>
       <stop offset="1" stop-color="#F5F3FF"/>
     </linearGradient>
-    <linearGradient id="accent" x1="133" y1="130" x2="381" y2="382" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0EA5E9"/>
-      <stop offset="0.48" stop-color="#4F46E5"/>
-      <stop offset="1" stop-color="#7C3AED"/>
+    <linearGradient id="primary" x1="139" y1="134" x2="374" y2="376" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="0.42" stop-color="#4F46E5"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
     </linearGradient>
-    <linearGradient id="softAccent" x1="154" y1="167" x2="358" y2="360" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#BAE6FD"/>
-      <stop offset="1" stop-color="#DDD6FE"/>
+    <linearGradient id="panel" x1="142" y1="151" x2="358" y2="353" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EEF2FF"/>
     </linearGradient>
-    <filter id="shadow" x="42" y="48" width="428" height="430" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <filter id="softShadow" x="55" y="56" width="402" height="410" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feFlood flood-opacity="0" result="BackgroundImageFix"/>
       <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
       <feOffset dy="18"/>
-      <feGaussianBlur stdDeviation="26"/>
-      <feColorMatrix type="matrix" values="0 0 0 0 0.192 0 0 0 0 0.18 0 0 0 0 0.545 0 0 0 0.18 0"/>
+      <feGaussianBlur stdDeviation="25"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.121 0 0 0 0 0.137 0 0 0 0 0.318 0 0 0 0.16 0"/>
       <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
       <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
     </filter>
   </defs>
 
-  <rect width="512" height="512" rx="118" fill="url(#background)"/>
-  <circle cx="124" cy="128" r="82" fill="#BAE6FD" fill-opacity="0.54"/>
-  <circle cx="392" cy="382" r="108" fill="#DDD6FE" fill-opacity="0.72"/>
+  <rect width="512" height="512" rx="124" fill="url(#page)"/>
+  <circle cx="145" cy="126" r="86" fill="#BAE6FD" fill-opacity="0.5"/>
+  <circle cx="388" cy="383" r="118" fill="#DDD6FE" fill-opacity="0.68"/>
 
-  <g filter="url(#shadow)">
-    <rect x="82" y="82" width="348" height="348" rx="92" fill="white" fill-opacity="0.8"/>
-    <rect x="83" y="83" width="346" height="346" rx="91" stroke="white" stroke-opacity="0.95" stroke-width="2"/>
+  <g filter="url(#softShadow)">
+    <rect x="96" y="92" width="320" height="324" rx="84" fill="white" fill-opacity="0.82"/>
+    <rect x="97" y="93" width="318" height="322" rx="83" stroke="white" stroke-width="2"/>
   </g>
 
-  <rect x="143" y="151" width="226" height="170" rx="35" fill="url(#softAccent)" fill-opacity="0.55" stroke="url(#accent)" stroke-width="13"/>
-  <path d="M143 205H369" stroke="url(#accent)" stroke-width="13" stroke-linecap="round"/>
-  <circle cx="177" cy="178" r="8" fill="#38BDF8"/>
-  <circle cx="204" cy="178" r="8" fill="#818CF8"/>
-  <circle cx="231" cy="178" r="8" fill="#A78BFA"/>
+  <rect x="151" y="164" width="210" height="164" rx="42" fill="url(#panel)" stroke="url(#primary)" stroke-width="12"/>
+  <rect x="177" y="190" width="158" height="18" rx="9" fill="#C7D2FE"/>
+  <rect x="177" y="225" width="82" height="18" rx="9" fill="#BAE6FD"/>
+  <rect x="177" y="260" width="132" height="18" rx="9" fill="#DDD6FE"/>
 
-  <path d="M205 264L174 238L205 212" stroke="url(#accent)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M307 212L338 238L307 264" stroke="url(#accent)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M274 215L238 266" stroke="url(#accent)" stroke-width="18" stroke-linecap="round"/>
+  <path d="M151 331C177 364 215 383 256 383C297 383 335 364 361 331" stroke="url(#primary)" stroke-width="13" stroke-linecap="round"/>
+  <path d="M256 130V164" stroke="url(#primary)" stroke-width="13" stroke-linecap="round"/>
+  <path d="M126 254H151" stroke="url(#primary)" stroke-width="13" stroke-linecap="round"/>
+  <path d="M361 254H386" stroke="url(#primary)" stroke-width="13" stroke-linecap="round"/>
 
-  <path d="M256 330C289 330 318 310 331 281C317 310 289 330 256 330C223 330 195 310 181 281C194 310 223 330 256 330Z" fill="url(#accent)" fill-opacity="0.16"/>
-  <path d="M256 343C304 343 345 315 363 274" stroke="url(#accent)" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 24"/>
-  <path d="M149 274C167 315 208 343 256 343" stroke="url(#accent)" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 24"/>
+  <circle cx="256" cy="126" r="18" fill="white" stroke="url(#primary)" stroke-width="10"/>
+  <circle cx="122" cy="254" r="18" fill="white" stroke="url(#primary)" stroke-width="10"/>
+  <circle cx="390" cy="254" r="18" fill="white" stroke="url(#primary)" stroke-width="10"/>
+  <circle cx="256" cy="383" r="18" fill="white" stroke="url(#primary)" stroke-width="10"/>
 
-  <circle cx="151" cy="274" r="16" fill="white" stroke="url(#accent)" stroke-width="9"/>
-  <circle cx="361" cy="274" r="16" fill="white" stroke="url(#accent)" stroke-width="9"/>
-  <circle cx="256" cy="343" r="16" fill="white" stroke="url(#accent)" stroke-width="9"/>
-
-  <path d="M367 139L377 164L402 174L377 184L367 209L357 184L332 174L357 164L367 139Z" fill="url(#accent)"/>
-  <path d="M148 330L154 346L170 352L154 358L148 374L142 358L126 352L142 346L148 330Z" fill="url(#accent)" fill-opacity="0.72"/>
+  <path d="M366 122L374 143L395 151L374 159L366 180L358 159L337 151L358 143L366 122Z" fill="url(#primary)"/>
 </svg>
