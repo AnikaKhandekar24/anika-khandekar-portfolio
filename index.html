@@ -417,19 +417,26 @@
         </div>
       </div>
 
-      <form class="contact-form">
+      <!--
+        This form is submitted through FormSubmit using the endpoint in script.js.
+        Update CONTACT_FORM_ENDPOINT there if the receiving email changes.
+      -->
+      <form class="contact-form" novalidate>
         <label>
           Name
-          <input type="text" name="name" placeholder="Your name">
+          <input type="text" name="name" autocomplete="name" placeholder="Your name" required>
         </label>
         <label>
           Email
-          <input type="email" name="email" placeholder="you@example.com">
+          <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
         </label>
         <label>
           Message
-          <textarea name="message" rows="5" placeholder="Write your message"></textarea>
+          <textarea name="message" rows="5" placeholder="Write your message" required></textarea>
         </label>
+        <input type="hidden" name="_subject" value="New portfolio contact message">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
         <button class="button primary" type="submit">Send Message</button>
         <p class="form-status" role="status" aria-live="polite"></p>
       </form>

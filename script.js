@@ -9,9 +9,9 @@ const webLiftFormStatus = document.querySelector(".weblift-form-status");
 const openWebLiftModalButton = document.querySelector("[data-open-weblift-contact]");
 const closeWebLiftModalButtons = document.querySelectorAll("[data-close-weblift-contact]");
 
-// FormSubmit delivers WebLift inquiries to this address without exposing service keys.
-// Change the email in this endpoint if the receiving address changes.
-const WEBLIFT_FORM_ENDPOINT = "https://formsubmit.co/ajax/khandekar.anika24@gmail.com";
+// FormSubmit delivers both contact forms without exposing service keys.
+// Change this email endpoint if the receiving address changes.
+const CONTACT_FORM_ENDPOINT = "https://formsubmit.co/ajax/khandekar.anika24@gmail.com";
 
 navToggle.addEventListener("click", () => {
   const isOpen = siteNav.classList.toggle("open");
@@ -42,10 +42,43 @@ const revealObserver = new IntersectionObserver(
 revealItems.forEach((item) => revealObserver.observe(item));
 
 if (contactForm && formStatus) {
-  contactForm.addEventListener("submit", (event) => {
+  contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
-    formStatus.textContent = "Thank you. This form is ready to connect to an email or form service.";
-    contactForm.reset();
+
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
+
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.textContent;
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+    formStatus.textContent = "";
+    formStatus.classList.remove("error");
+
+    try {
+      const response = await fetch(CONTACT_FORM_ENDPOINT, {
+        method: "POST",
+        headers: {
+          Accept: "application/json"
+        },
+        body: new FormData(contactForm)
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      contactForm.reset();
+      formStatus.textContent = "Thank you! I'll get back to you soon.";
+    } catch (error) {
+      formStatus.textContent = "Sorry, your message could not be sent. Please try again or email me directly.";
+      formStatus.classList.add("error");
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = originalButtonText;
+    }
   });
 }
 
@@ -93,7 +126,7 @@ if (webLiftModal && webLiftForm && webLiftFormStatus && openWebLiftModalButton) 
 
     try {
       const formData = new FormData(webLiftForm);
-      const response = await fetch(WEBLIFT_FORM_ENDPOINT, {
+      const response = await fetch(CONTACT_FORM_ENDPOINT, {
         method: "POST",
         headers: {
           Accept: "application/json"

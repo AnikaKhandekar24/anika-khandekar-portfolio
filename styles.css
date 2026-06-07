@@ -1095,6 +1095,10 @@ body.modal-open {
   min-height: 24px;
 }
 
+.form-status.error {
+  color: #a3493e;
+}
+
 .site-footer {
   align-items: center;
   color: var(--muted);
