@@ -120,9 +120,9 @@ a {
 
 .brand-mark img {
   display: block;
-  height: 100%;
-  object-fit: contain;
-  width: 100%;
+  height: 132%;
+  object-fit: cover;
+  width: 132%;
 }
 
 .site-nav {
@@ -470,9 +470,9 @@ h3 {
 
 .logo-visual img {
   display: block;
-  height: 84%;
-  object-fit: contain;
-  width: 84%;
+  height: 106%;
+  object-fit: cover;
+  width: 106%;
 }
 
 .mini-grid {
