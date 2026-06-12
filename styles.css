@@ -659,15 +659,101 @@ h3 {
   display: grid;
   gap: 17px;
   justify-items: end;
+  min-width: 0;
 }
 
-.archive-action img {
+.archive-live-preview {
+  background: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(129, 140, 248, 0.18);
   border-radius: 20px;
   box-shadow: 0 20px 45px rgba(79, 70, 229, 0.14);
-  display: block;
-  max-width: 390px;
+  max-width: 430px;
+  overflow: hidden;
+  position: relative;
   width: 100%;
+}
+
+.archive-browser-bar {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  min-height: 42px;
+  padding: 8px 12px;
+}
+
+.browser-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.browser-dots i {
+  background: #c4b5fd;
+  border-radius: 50%;
+  display: block;
+  height: 7px;
+  width: 7px;
+}
+
+.browser-dots i:nth-child(2) {
+  background: #93c5fd;
+}
+
+.browser-dots i:nth-child(3) {
+  background: #86efac;
+}
+
+.browser-address {
+  background: #f8fafc;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 999px;
+  color: #64748b;
+  font-size: 0.66rem;
+  overflow: hidden;
+  padding: 5px 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.live-status {
+  align-items: center;
+  color: #475569;
+  display: inline-flex;
+  font-size: 0.66rem;
+  font-weight: 700;
+  gap: 5px;
+}
+
+.live-status i {
+  background: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.12);
+  height: 7px;
+  width: 7px;
+}
+
+.archive-preview-window {
+  aspect-ratio: 16 / 10;
+  background:
+    radial-gradient(circle at 18% 25%, rgba(125, 211, 252, 0.2), transparent 32%),
+    #f8fafc;
+  overflow: hidden;
+  position: relative;
+}
+
+.archive-preview-window img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.45s ease;
+  width: 100%;
+}
+
+.archive-live-preview:hover .archive-preview-window img {
+  transform: scale(1.025);
 }
 
 .feline-section {
