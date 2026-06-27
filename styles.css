@@ -786,6 +786,168 @@ h3 {
   transform: scale(1.025);
 }
 
+.passion-project-card {
+  align-items: stretch;
+  background:
+    radial-gradient(circle at 86% 12%, rgba(59, 130, 246, 0.18), transparent 30%),
+    radial-gradient(circle at 8% 85%, rgba(124, 58, 237, 0.16), transparent 32%),
+    rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(129, 140, 248, 0.2);
+  border-radius: 26px;
+  box-shadow: 0 24px 58px rgba(79, 70, 229, 0.12);
+  display: grid;
+  gap: clamp(22px, 4vw, 42px);
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 1.25fr) minmax(250px, 0.75fr);
+  margin-top: 2px;
+  overflow: hidden;
+  padding: clamp(24px, 4vw, 36px);
+}
+
+.passion-project-copy {
+  display: grid;
+  gap: 13px;
+}
+
+.passion-project-copy h3 {
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  line-height: 1;
+  margin: 0;
+}
+
+.passion-project-copy p {
+  color: var(--muted);
+  margin: 0;
+  max-width: 82ch;
+}
+
+.passion-subtitle {
+  color: #334155 !important;
+  font-size: clamp(1.02rem, 1.8vw, 1.22rem);
+  font-weight: 750;
+}
+
+.passion-project-card .button {
+  justify-self: start;
+  margin-top: 4px;
+}
+
+.lingua-preview {
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(224, 242, 254, 0.72), rgba(237, 233, 254, 0.82)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.36) 1px, transparent 1px) 0 0 / 28px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 24px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.76);
+  display: grid;
+  min-height: 100%;
+  overflow: hidden;
+  padding: clamp(18px, 3vw, 28px);
+  position: relative;
+}
+
+.lingua-preview::before {
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.18), transparent 62%);
+  border-radius: 50%;
+  content: "";
+  height: 230px;
+  position: absolute;
+  right: -56px;
+  top: -68px;
+  width: 230px;
+}
+
+.lingua-orbit {
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.lingua-orbit span {
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(129, 140, 248, 0.22);
+  border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(79, 70, 229, 0.1);
+  color: #4f46e5;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 7px 11px;
+  position: absolute;
+}
+
+.lingua-orbit span:nth-child(1) {
+  right: 22px;
+  top: 24px;
+}
+
+.lingua-orbit span:nth-child(2) {
+  left: 18px;
+  top: 38%;
+}
+
+.lingua-orbit span:nth-child(3) {
+  bottom: 24px;
+  right: 32px;
+}
+
+.lingua-panel {
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(255, 255, 255, 0.88);
+  border-radius: 22px;
+  box-shadow: 0 20px 44px rgba(30, 41, 59, 0.11);
+  display: grid;
+  gap: 15px;
+  justify-self: center;
+  max-width: 320px;
+  padding: 24px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.lingua-chip {
+  background: #eef2ff;
+  border: 1px solid rgba(129, 140, 248, 0.22);
+  border-radius: 999px;
+  color: #4f46e5;
+  font-size: 0.74rem;
+  font-weight: 850;
+  justify-self: start;
+  letter-spacing: 0.08em;
+  padding: 7px 10px;
+  text-transform: uppercase;
+}
+
+.lingua-panel strong {
+  color: #111827;
+  font-family: Sora, Inter, sans-serif;
+  font-size: clamp(1.22rem, 2vw, 1.56rem);
+  line-height: 1.18;
+}
+
+.lingua-lines {
+  display: grid;
+  gap: 8px;
+}
+
+.lingua-lines i {
+  background: linear-gradient(90deg, rgba(79, 70, 229, 0.75), rgba(125, 211, 252, 0.7));
+  border-radius: 999px;
+  display: block;
+  height: 8px;
+}
+
+.lingua-lines i:nth-child(2) {
+  opacity: 0.7;
+  width: 78%;
+}
+
+.lingua-lines i:nth-child(3) {
+  opacity: 0.5;
+  width: 54%;
+}
+
 .feline-section {
   padding-bottom: 24px;
   padding-top: 24px;
@@ -1525,6 +1687,7 @@ body.modal-open {
   .mission-section,
   .leadership-grid,
   .feline-showcase,
+  .passion-project-card,
   .archive-card,
   .resume-section,
   .contact-section {
@@ -1574,6 +1737,10 @@ body.modal-open {
 
   .archive-action {
     justify-items: start;
+  }
+
+  .lingua-preview {
+    min-height: 300px;
   }
 }
 
@@ -1709,11 +1876,34 @@ body.modal-open {
 
   .archive-card,
   .mission-section,
+  .passion-project-card,
   .resume-section,
   .contact-section {
     border-radius: 24px;
     max-width: calc(100% - 20px);
     padding: 28px 20px;
+  }
+
+  .passion-project-card {
+    gap: 22px;
+  }
+
+  .passion-project-copy .button {
+    width: 100%;
+  }
+
+  .lingua-preview {
+    min-height: 260px;
+    padding: 18px;
+  }
+
+  .lingua-orbit span {
+    font-size: 0.66rem;
+    padding: 6px 9px;
+  }
+
+  .lingua-panel {
+    padding: 20px;
   }
 
   .project-thumb {
